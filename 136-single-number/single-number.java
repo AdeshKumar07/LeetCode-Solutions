@@ -1,10 +1,10 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        int count=0;
+        int U_e=0;
         int n=nums.length;
         for(int i=0;i<n;i++){
-            count=count ^ nums[i];
+            U_e =U_e ^ nums[i];
         }
-        return count;
+        return U_e;
     }
 }
