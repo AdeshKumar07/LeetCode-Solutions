@@ -1,9 +1,25 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        int result = 0;
-        for (int num : nums) {
-            result ^= num; // XOR each element
+        int l = 0;
+        int r = nums.length - 2;
+
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+
+           
+            if (mid % 2 == 1) {
+                mid--;
+            }
+
+           
+            if (nums[mid] == nums[mid + 1]) {
+                l = mid + 2;
+            } else {
+                r = mid - 1;
+            }
         }
-        return result;
+
+      
+        return nums[l];
     }
 }
