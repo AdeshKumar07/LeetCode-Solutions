@@ -13,7 +13,7 @@ class Solution {
             }
             n/=10;
         }
-       int su = (count % 2 != 0)? -sum:sum;
+        int su = (count % 2 != 0)? -sum:sum;
         return su;
 
         
