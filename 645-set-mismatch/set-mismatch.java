@@ -14,8 +14,6 @@ class Solution {
             a_s+=num;
         }
         arr[1]=r_s-(a_s-arr[0]);
-        
-       
         return arr;
         
     }
