@@ -10,9 +10,9 @@ public:
             }
         }
         for(int i=0;i<nums.size();i++){
-            if(i!=r_i && l<nums[i]*2){
-                return -1;
-            }
+            if(r_i!=i && l<2*nums[i]) 
+            return -1;
+
         }
         return r_i;
        
