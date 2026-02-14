@@ -8,7 +8,7 @@ class Solution {
         int left=0;
 
         for(int r=0;r<n;r++){
-            sum+=nums[r]; //tracking current window sum if move right new ele add & move left ele remove 
+            sum+=nums[r]; 
             map.put(nums[r],map.getOrDefault(nums[r],0)+1);
             if(r - left +1 > k){
                 sum -= nums[left];
