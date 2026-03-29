@@ -56,6 +56,6 @@ class Solution {
                 curr=curr.next;
             }
         }
-        return rev(res);
+    return rev(res);
     }
 }
