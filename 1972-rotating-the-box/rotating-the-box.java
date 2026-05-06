@@ -14,7 +14,7 @@ class Solution {
             for(int j=0;j<m;j++){
                 res[i][j]='.';
             }
-        }
+        } 
         for(int i=0;i<m;i++){
             int c=0;
             for(int j=0;j<n;j++){
