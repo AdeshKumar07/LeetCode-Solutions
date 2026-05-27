@@ -20,7 +20,6 @@ class Solution {
         if(t1==null && t2!=null) return false;
         if(t1.val != t2.val) return false;
         return mirror(t1.left,t2.right) && mirror(t1.right,t2.left);
-
     }
 
     public boolean isSymmetric(TreeNode root) {
