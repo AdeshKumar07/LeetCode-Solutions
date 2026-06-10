@@ -12,21 +12,20 @@
  *         this.right = right;
  *     }
  * }
- */  
+ */
 class Solution {
-    static void helper(TreeNode root, List<Integer> ans)
-    {
-        if(root==null){
-            return ;
-        }
-        helper(root.left,ans);
-        ans.add(root.val);
-        helper(root.right,ans);
+    static void InorderT(TreeNode Node, ArrayList<Integer> res){
+        if(Node==null) return ;
 
+        InorderT(Node.left,res);
+        res.add(Node.val);
+        InorderT(Node.right,res);    
     }
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> ans=new ArrayList<>();
-        helper(root,ans);
-        return ans;      
+        ArrayList<Integer> ans=new ArrayList<>();
+        
+        InorderT(root,ans);;
+        return ans;
+        
     }
 }
