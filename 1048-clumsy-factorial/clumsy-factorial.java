@@ -1,0 +1,29 @@
+class Solution {
+    public int clumsy(int n) {
+        Deque<Integer> st=new ArrayDeque<>();
+        st.push(n);
+
+        int op=0;
+
+        for(int i=n-1;i>0;i--){
+            if(op==0){
+                st.push(st.pop()*i);
+            }
+            else if(op==1){
+                st.push(st.pop()/i);
+            }
+            else if(op==2){
+                st.push(i);
+            }
+            else if(op==3){
+                st.push(-i);
+            }
+            op=(op+1)%4;
+        }
+        int s=0;
+        while(!st.isEmpty()){
+            s+=st.pop();
+        }
+        return s;
+    }
+}
