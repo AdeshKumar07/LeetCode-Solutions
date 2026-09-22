@@ -1,13 +1,14 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-        if(s.length() != t.length()) return false;
+        HashMap<Character, Integer> map1=new HashMap<>();
+        HashMap<Character, Integer> map2=new HashMap<>();
 
-        char[] st1=s.toCharArray();
-        char[] st2=t.toCharArray();
-
-        Arrays.sort(st1);
-        Arrays.sort(st2);
-
-        return Arrays.equals(st1,st2);
-    }
+        for(char c: s.toCharArray()){
+            map1.put(c,map1.getOrDefault(c,0)+1);
+        }
+        for(char c: t.toCharArray()){
+            map2.put(c,map2.getOrDefault(c,0)+1);
+        }
+        return map1.equals(map2);
+     }
 }
