@@ -1,12 +1,12 @@
 class Solution {
     public List<Integer> targetIndices(int[] nums, int target) {
-        ArrayList<Integer> ls=new ArrayList<>();
+        ArrayList<Integer> ans=new ArrayList<>();
         Arrays.sort(nums);
         for(int i=0;i<nums.length;i++){
             if(nums[i]==target){
-                ls.add(i);
+                ans.add(i);
             }
         }
-        return ls;
+        return ans;
     }
 }
