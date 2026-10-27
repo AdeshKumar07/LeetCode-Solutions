@@ -1,28 +1,27 @@
 class Solution {
-
-    public static boolean check(String str1){
-        int x=0,y=0;
-        String str=str1.toUpperCase();
-        int n=str.length();
+    public boolean judgeCircle(String moves) {
+       
+        // code here
+        int x=0;
+        int y=0;
+        String s=moves.toUpperCase();
+        int n=s.length();
         for(int i=0;i<n;i++){
-            if(str.charAt(i)=='U'){
-                y++;
+            if(s.charAt(i)=='U'){
+                y=y+1;
             }
-            else if(str.charAt(i)=='D'){
-                y--;
+            else if(s.charAt(i)=='D'){
+                y=y-1;
             }
-            else if(str.charAt(i)=='L'){
-                x--;
+            else if(s.charAt(i)=='R'){
+                x=x+1;
             }
-            else{
-                x++;
+            else if(s.charAt(i)=='L'){
+                x=x-1;
             }
+            
         }
         if(x==0 && y==0) return true;
         return false;
-
-    }
-    public boolean judgeCircle(String moves) {
-        return check(moves);
     }
 }
